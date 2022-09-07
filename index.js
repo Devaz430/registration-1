@@ -29,7 +29,7 @@ const table =` <table class='table-auto w-full'>
     <th class='px-4 py-2 '>Email </th>
     <th class='px-4 py-2 '>Password </th>
     <th class='px-4 py-2 '>Dob </th>
-    <th class='px-4 py-2 '>Accepted terms </th>
+    <th class='px-4 py-2 '>Accepted terms? </th>
     </tr>${tbleEntries}
 </table>`
 let details = document.getElementById('user-entries')
@@ -65,6 +65,7 @@ if(age < 18 || age > 55){
      userEntries.push(entry);
      localStorage.setItem("userEntries",JSON.stringify(userEntries))
     displayEntries()
+    userForm.reset()
    
 }
  
