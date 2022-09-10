@@ -1,5 +1,5 @@
 let userForm = document.getElementById("user_form");
-let userEntries =[]
+var userEntries=[];
 
 let errors=[]
 const retieveEntries = ()=>{
@@ -62,6 +62,7 @@ if(age < 18 || age > 55){
         dob,
         acceptTerms
      }
+     userEntries=retieveEntries()
      userEntries.push(entry);
      localStorage.setItem("userEntries",JSON.stringify(userEntries))
     displayEntries()
